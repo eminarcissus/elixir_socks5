@@ -35,4 +35,25 @@ defmodule ElixirSocks5.Mixfile do
       {:socket, "~> 0.3"},
     ]
   end
+
+  defp description do
+    """
+    Yet another socks5 server implementation
+    when running alone(iex -S mix), it will listen on port 9898
+    import in your project and start it with
+    SocksServer.Listener.Sup.start_link(9898)
+    Project is published with MIT License
+    """
+  end
+
+  defp package do
+    # These are the default files included in the package
+    [
+      name: :elixir_socks5,
+      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      maintainers: ["EmiNarcissus"],
+      licenses: ["MIT License"],
+      links: %{"GitHub" => "https://github.com/eminarcissus/elixir_socks5"}
+    ]
+  end
 end
