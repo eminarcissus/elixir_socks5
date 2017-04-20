@@ -7,6 +7,8 @@ defmodule ElixirSocks5.Mixfile do
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description(),
+     package: package(),
      deps: deps()]
   end
 
@@ -33,6 +35,7 @@ defmodule ElixirSocks5.Mixfile do
   defp deps do
     [
       {:socket, "~> 0.3"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
@@ -50,7 +53,7 @@ defmodule ElixirSocks5.Mixfile do
     # These are the default files included in the package
     [
       name: :elixir_socks5,
-      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["EmiNarcissus"],
       licenses: ["MIT License"],
       links: %{"GitHub" => "https://github.com/eminarcissus/elixir_socks5"}
