@@ -19,7 +19,7 @@ defmodule ElixirSocks5.Mixfile do
     # Specify extra applications you'll use from Erlang/Elixir
     [
       extra_applications: [:logger],
-      mod: {ElixirSocks5, []},
+      #mod: {ElixirSocks5, []},
     ]
   end
 
